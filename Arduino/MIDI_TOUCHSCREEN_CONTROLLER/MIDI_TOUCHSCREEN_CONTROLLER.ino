@@ -1,3 +1,13 @@
+/*###############################################################
+#                                                               #
+#          ARDUINO MIDI XY CONTROLLER FOR KORG KP2&KP3          #
+#              Version: 2.0 with "BlinkM" Support               #
+#  Designed by: Elia Lazzari on 06/10/2015 at 02:12 in Bologna  #
+#     License: GNU GPL License, Copyright 2015 Elia Lazzari     #
+#               http://eliuslab.com/projects/code               #
+#                                                               #
+################################################################*/
+
 #include <Wire.h>
 #include <EEPROM.h>
 
