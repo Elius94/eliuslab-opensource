@@ -90,7 +90,6 @@ void setup() {
   attachInterrupt(0, doEncoderA, CHANGE);
   attachInterrupt(1, doEncoderB, CHANGE);
 
-  Serial.begin (9600);
   Serial.begin(31250);
   //Serial.begin(9600);
 }
