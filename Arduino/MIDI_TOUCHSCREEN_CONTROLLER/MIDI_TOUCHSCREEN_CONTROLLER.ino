@@ -201,8 +201,9 @@ void calibrate() {
   digitalWrite(HOLD_LED, HIGH);
   delay(200);
   digitalWrite(HOLD_LED, LOW);
+  delay(500);
   //PREMERE IL PUNTO X0;Y0 SUL DISPLAY
-  while (!digitalRead(ENCODER_B)) {
+  while (digitalRead(ENCODER_B)==LOW) {
     xOffset = readX();
     yOffset = readY();
     delay(50);
@@ -219,8 +220,9 @@ void calibrate() {
   digitalWrite(HOLD_LED, HIGH);
   delay(200);
   digitalWrite(HOLD_LED, LOW);
+  delay(500);
   //PREMERE IL PUNTO XMAX;YMAX SUL DISPLAY
-  while (!digitalRead(ENCODER_B)) {
+  while (digitalRead(ENCODER_B)==LOW) {
     xMax = readX();
     yMax = readY();
     delay(50);
