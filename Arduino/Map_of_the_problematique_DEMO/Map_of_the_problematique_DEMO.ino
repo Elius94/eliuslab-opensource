@@ -10,7 +10,10 @@
 int i = 0;
 
 int ccSequence[16] = {127,0,127,0,127,0,127,0,127,0,127,0,127,0,127,0};
-int pcSequence[16] = {5,5,4,4,4,4,5,5,4,4,4,4,5,5,4,4};
+int pcSequence[16] = {50,50,44,44,44,44,50,50,44,44,44,44,50,50,44,44};
+
+//int ccSequence[16] = {0,127,0,127,0,127,0,127,0,127,0,127,0,127,0,127};
+//int pcSequence[16] = {44,50,44,50,44,50,44,50,44,50,44,50,44,50,44,50};
 
 int bpm = 120;
 int channel = 0;
@@ -19,6 +22,7 @@ int channel = 0;
 void setup() {                
   // initialize the digital pin as an output.
   delay(4000);
+  Serial.begin(31250);
 }
 
 // the loop routine runs over and over again forever:
@@ -32,7 +36,7 @@ void loop() {
 void pulse() {
   if(i>15) i=0;
   midiSendPC(pcSequence[i],channel);
-  midiSendCC(13,ccSequence[i],channel);
+  midiSendCC(11,ccSequence[i],channel);
   i++;
 }
 
